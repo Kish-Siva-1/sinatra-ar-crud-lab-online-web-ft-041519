@@ -34,11 +34,11 @@ class ApplicationController < Sinatra::Base
 
   get '/articles/:id/edit' do 
     @article = Article.find(params[:id])
-    binding.pry
     erb :edit
   end
   
   patch '/articles/:id' do
+    binding.pry
     @article = Article.find(params[:id])
     @article[:title] = params[:title]
     @article[:content] = params[:content]
