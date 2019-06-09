@@ -1,8 +1,6 @@
 <form method="post" action="/articles/<%= @article.id %>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
   
-  <% binding.pry %>
-  
   Title: <input type="text" name="article[title]" id="article[title]" value>
   Content: <input type="text" name="article[content]" id="article[content]">
   
